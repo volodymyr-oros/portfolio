@@ -1,0 +1,56 @@
+/* 
+File sructure:
+
+CSS root
+Set up page template
+
+*/
+
+/* CSS root */
+
+:root {
+    --color: red;
+}
+
+/* Set up page template */
+
+.wrapper {
+    /* overflow-x: hidden; */
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.template {
+    display: grid;
+    grid-template: 
+    auto 1fr auto / 
+    [edge-start] minmax(15px, 1fr) 
+    [content-start] minmax(80px, 200px) 
+    [modal-start] minmax(250px, 400px) [center] 
+    minmax(250px, 400px) [modal-end] 
+    minmax(80px, 200px) [content-end] 
+    minmax(15px, 1fr) [edge-end];
+}
+
+.template > * {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: edge-start / edge-end;
+}
+
+.template__inherit {
+    display: grid;
+}
+
+.template--full {
+    grid-column: edge-start / edge-end;
+}
+
+.template--content {
+    grid-column: content-start / content-end;
+}
+
+.template--modal {
+    grid-column: modal-start / modal-end;
+}
+

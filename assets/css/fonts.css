@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/inter/Inter-Regular.eot');
+    src: url('/assets/fonts/inter/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/inter/Inter-Regular.woff2') format('woff2'),
+        url('/assets/fonts/inter/Inter-Regular.woff') format('woff'),
+        url('/assets/fonts/inter/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Meow Script';
+    src: url('/assets/fonts/meow-script/MeowScript-Regular.eot');
+    src: url('/assets/fonts/meow-script/MeowScript-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/meow-script/MeowScript-Regular.woff2') format('woff2'),
+        url('/assets/fonts/meow-script/MeowScript-Regular.woff') format('woff'),
+        url('/assets/fonts/meow-script/MeowScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
