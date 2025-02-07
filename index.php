@@ -13,9 +13,7 @@
             <div class="page__box template__inherit template--content">
                 <div class="page__content">
                     <div class="page__title-wrapper">
-                        <h1 class="page__title-text">
-                            Home page
-                        </h1>
+                        <h1 class="page__title-text hidden-text">Home page</h1>
                     </div>
                 </div>
             </div>
