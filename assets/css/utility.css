@@ -13,3 +13,16 @@
 .flex-space-btw {
     justify-content: space-between;
 }
+
+.flex-align-center {
+    align-items: center;
+}
+
+.hidden-text {
+    clip-path: inset(50%);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}  
