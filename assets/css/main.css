@@ -10,7 +10,15 @@ Header
 /* CSS root */
 
 :root {
-    --color: red;
+    /* color scheme */
+    --primary-color: #1E3A8A;
+    --accent: #2563EB;
+    --accent-warm: #FB923C;
+    --background: #EFF6FF;
+    --text: #374151;
+    --success: #22C55E;
+    --warning: #FBBF24;
+    --error: #DC2626;
 }
 
 /* Set up page template */
