@@ -4,6 +4,8 @@ File sructure:
 CSS root
 Set up page template
 Header
+Main
+Forms
 
 */
 
@@ -19,6 +21,15 @@ Header
     --success: #22C55E;
     --warning: #FBBF24;
     --error: #DC2626;
+
+    /* form var */
+    --input-padding: calc(var(--font-size) / 2);
+    --border: 0.2rem;
+    --font-size: 1rem;
+    --label-height: calc(var(--font-size) + calc(var(--border) * 2));
+    --border-color: black;
+    --input-background: white;
+    --input-width: calc(var(--font-size) * 20);
 }
 
 /* Set up page template */
@@ -42,7 +53,7 @@ Header
     minmax(15px, 1fr) [edge-end];
 }
 
-.template > * {
+.template>* {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: edge-start / edge-end;
@@ -90,7 +101,7 @@ Header
     box-shadow: 0px 0px .1em black;
 }
 
-.logo:hover > .logo__link:hover {
+.logo:hover>.logo__link:hover {
     text-decoration: underline;
 }
 
@@ -106,4 +117,87 @@ Header
 
 .account__link {
     font-size: 1.5rem;
+}
+
+/* Main */
+
+.page__title-text {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Inter';
+}
+
+/* Forms */
+
+.form {
+    padding-block: calc(var(--font-size) * 2);
+    display: inline-block;
+}
+
+.form__row {
+    position: relative;
+    margin-block-end: var(--font-size);
+}
+
+.form__row--action {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: var(--font-size);
+}
+
+.form__label {
+    position: absolute;
+    inset-block-start: calc(50% - calc(var(--label-height) / 2));
+    transition: all 0.3s ease;
+    inset-inline-start: var(--font-size);
+    padding-inline: calc(var(--font-size) / 2);
+    border: var(--border) solid transparent;
+}
+
+.form__label,
+.form__input {
+    font-size: var(--font-size);
+    background: var(--input-background);
+    border-radius: var(--font-size);
+}
+
+.form__input {
+    width: var(--input-width);
+    padding: var(--input-padding) var(--font-size);
+    border: var(--border) solid var(--border-color);
+}
+
+.form__input::placeholder {
+    color: transparent;
+}
+
+.form__input:focus::placeholder {
+    color: black;
+    transition: color 1s ease;
+}
+
+.form__row:focus-within .form__label,
+.form__row--filled .form__label {
+    inset-block-start: calc(-50% + calc(var(--label-height) / 3.5));
+    border: var(--border) solid var(--border-color);
+}
+
+.button {
+    font-size: var(--font-size);
+    padding: calc(var(--font-size) / 4) var(--font-size);
+    cursor: pointer;
+}
+
+.button__submit {
+    border: var(--border) solid var(--border-color);
+    border-radius: var(--font-size);
+}
+
+.button__reset {
+    border: none;
+    background: transparent;
+}
+
+.button__reset:hover {
+    text-decoration: underline;
 }
