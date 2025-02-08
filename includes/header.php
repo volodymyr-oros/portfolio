@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__box template__inherit template--content">
-        <div class="header__content flex flex-space-btw">
+        <div class="header__content flex flex-jst-btw">
             <div class="header__logo logo">
                 <a href="#" class="logo__link">My portfolio</a>
             </div>
