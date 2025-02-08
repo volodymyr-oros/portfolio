@@ -10,8 +10,12 @@
     flex: 1 1 auto;
 }
 
-.flex-space-btw {
+.flex-jst-btw {
     justify-content: space-between;
+}
+
+.flex-jst-cnt {
+    justify-content: center;
 }
 
 .flex-align-center {
