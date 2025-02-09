@@ -1,22 +1,28 @@
 <header class="header">
     <div class="header__box template__inherit template--content">
-        <div class="header__content flex flex-jst-btw">
+        <div class="header__content flex flex-alg-cnt flex-jst-btw">
             <div class="header__logo logo">
                 <a href="#" class="logo__link">My portfolio</a>
             </div>
-            <nav class="navigation flex flex-align-center">
+            <nav class="navigation">
                 <ul class="menu flex">
                     <li class="menu__item">
                         <a href="#" class="menu__link">Menu-category-1</a>
                     </li>
                 </ul>
             </nav>
-            <div class="accout flex flex-align-center">
-                <ul class="accout__meun">
-                    <li class="account__item">
-                        <a href="#" class="account__link">My account</a>
-                    </li>
-                </ul>
+            <div class="account">
+                <div class="account__name menu-parent">
+                    <a href="/" class="account__link">My account</a>
+                    <ul class="accout__menu menu-child first-child">
+                        <li class="account__item">
+                            <a href="/customer/account/create.php" class="account__link">Sign up</a>
+                        </li>
+                        <li class="account__item">
+                            <a href="/customer/account/login.php" class="account__link">Log in</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
