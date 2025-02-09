@@ -1,3 +1,9 @@
+<?php
+require_once "../../includes/config_session.inc.php";
+require_once "../../includes/signup_view.inc.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +16,7 @@
 <body>
     <div class="wrapper template">
         <?php require("../../includes/header.php"); ?>
+        <?php check_signup_errors(); ?>
         <main class="page">
             <div class="page__box template__inherit template--content">
                 <div class="page__content">
@@ -17,7 +24,7 @@
                         <h1 class="page__title-text">Customer account create</h1>
                     </div>
                     <div class="page__section flex flex-jst-cnt">
-                        <form action="#" method="POST" class="form" autocomplete="on">
+                        <form action="../../includes/signup.inc.php" method="POST" class="form" autocomplete="on">
                             <div class="form__row">
                                 <label for="first-name" class="form__label">First name</label>
                                 <input id="first-name" type="text" name="first-name" class="form__input" placeholder="Enter your first name..." required autocomplete="given-name">
