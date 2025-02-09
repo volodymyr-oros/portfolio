@@ -16,7 +16,7 @@
                     <a href="/" class="account__link">My account</a>
                     <ul class="accout__menu menu-child first-child">
                         <li class="account__item">
-                            <a href="/customer/account/create.php" class="account__link">Sign up</a>
+                            <a href="/customer/account/signup.php" class="account__link">Sign up</a>
                         </li>
                         <li class="account__item">
                             <a href="/customer/account/login.php" class="account__link">Log in</a>
