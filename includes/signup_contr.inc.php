@@ -88,3 +88,19 @@ function is_password_confirmpassword_different(
         return false;
     }
 }
+
+function create_user(
+    object $pdo, 
+    string $user_first_name, 
+    string $user_last_name, 
+    string $user_email,
+    string $user_password
+) {
+    insert_user(
+        $pdo, 
+        $user_first_name, 
+        $user_last_name, 
+        $user_email,
+        $user_password
+    );
+}
