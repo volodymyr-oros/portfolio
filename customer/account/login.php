@@ -11,7 +11,7 @@
     <div class="wrapper template">
         <?php require("../../includes/header.php"); ?>
         <main class="page">
-            <div class="page__box template__inherit template--content">
+            <div class="page__box template--content">
                 <div class="page__content">
                     <div class="page__title-wrapper">
                         <h1 class="page__title-text">Login in to your account</h1>
