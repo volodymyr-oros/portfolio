@@ -109,6 +109,26 @@ Forms
 
 /* Main */
 
+.page {
+    grid-template-rows: auto 1fr;
+}
+
+.message__body {
+    padding-block: var(--font-size);
+}
+
+.message__text {
+    font-size: var(--font-size);
+    display: block;
+    border: var(--border) solid var(--border-color);
+    border-radius: var(--font-size);
+    padding: calc(var(--font-size) / 4) var(--font-size);
+    margin-block-end: var(--font-size);
+}
+
+.message__text:last-child {
+    margin-block-end: 0;
+}
 .page__title-text {
     text-align: center;
     font-size: 2rem;
