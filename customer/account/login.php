@@ -17,7 +17,7 @@
                         <h1 class="page__title-text">Login in to your account</h1>
                     </div>
                     <div class="page__section flex flex-jst-cnt">
-                        <form action="#" method="POST" class="form" autocomplete="on">
+                        <form action="../../includes/login/login.inc.php" method="POST" class="form" autocomplete="on">
 
                             <div class="form__row">
                                 <label for="email" class="form__label">Email</label>
