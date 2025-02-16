@@ -54,24 +54,24 @@ Forms
 }
 
 .template>* {
+    grid-column: span 6;
+}
+
+.template__subgrid {
     display: grid;
     grid-template-columns: subgrid;
+    grid-auto-rows: min-content;
+}
+
+.template__width-full {
     grid-column: edge-start / edge-end;
 }
 
-.template__inherit {
-    display: grid;
-}
-
-.template--full {
-    grid-column: edge-start / edge-end;
-}
-
-.template--content {
+.template__width-content {
     grid-column: content-start / content-end;
 }
 
-.template--modal {
+.template__width-modal {
     grid-column: modal-start / modal-end;
 }
 
@@ -105,13 +105,7 @@ Forms
     inset-inline-start: 0;
 }
 
-
-
 /* Main */
-
-.page {
-    grid-template-rows: auto 1fr;
-}
 
 .message__body {
     padding-block: var(--font-size);
