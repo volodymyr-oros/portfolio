@@ -1,7 +1,5 @@
-<footer class="footer">
-    <div class="footer__box template--content">
-        <div class="footer__content">
-            <p>Footer</p>
-        </div>
+<footer class="footer template__subgrid">
+    <div class="footer__content template__width-content">
+        <p>Footer</p>
     </div>
 </footer>

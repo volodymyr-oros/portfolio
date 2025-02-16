@@ -1,6 +1,6 @@
-<header class="header">
-    <div class="header__box template--content">
-        <div class="header__content flex flex-alg-cnt flex-jst-btw">
+<header class="header template__subgrid">
+    <div class="header__content template__width-content">
+        <div class="header__content2 flex flex-alg-cnt flex-jst-btw">
             <div class="header__logo logo">
                 <a href="#" class="logo__link">My portfolio</a>
             </div>
