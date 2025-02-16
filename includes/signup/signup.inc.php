@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($errors) {
             $_SESSION["errors_signup"] = $errors;
-            header("Location: /customer/account/signup.php");
+            header('Location: ../../customer/account/signup.php');
             die();
         }
 
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user_password
         );
 
-        header("Location: ../index.php?signup=success");
+        header('Location: ../index.php?signup=success');
 
         $pdo = null;
         $stmt = null;
@@ -76,10 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     } catch (PDOException $e) {
 
-        die("Query failed: " . $e->getMessage());
+        die('Query failed: ' . $e->getMessage());
     }
 } else {
 
-    header("Location: /customer/account/signup.php");
+    header('Location: ../../customer/account/signup.php');
     die();
 }
