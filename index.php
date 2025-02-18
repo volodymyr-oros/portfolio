@@ -8,19 +8,12 @@
 
 <body>
     <div class="wrapper template">
-
-        <?php
-            require_once './includes/header.php';
-        ?>
-
+        <?php require_once './includes/header.php'; ?>
         <main class="page template__subgrid">
+            <?php require_once './includes/page_message.inc.php' ?>
             <div class="page__content template__width-content"></div>
         </main>
-
-        <?php
-            require_once './includes/footer.php';
-        ?>
-
+        <?php require_once './includes/footer.php'; ?>
     </div>
 </body>
 

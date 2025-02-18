@@ -1,5 +1,3 @@
-<div class="page__message message template--modal">
-    <div class="message__body">
-        <span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-    </div>
-</div>
+<ul class="page__message message template__width-content">
+    <!-- <li class="message__item"></li> - page message example-->
+</ul>
