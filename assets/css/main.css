@@ -63,6 +63,8 @@ Desktop
     --mobile-navigation-indent: 30%;
 
     --line-width: 3px;
+
+    --sub-menu-arrow: 1rem;
 }
 
 .wrapper {
@@ -92,7 +94,7 @@ Desktop
 
 .header__content {
     position: relative;
-    padding: 1rem;
+    padding-block: 1rem;
     background: linear-gradient(0deg, transparent, var(--background) 20%);
 }
 
@@ -101,7 +103,7 @@ Desktop
     height: 2.2rem;
     aspect-ratio: 1 / 1;
     border: none;
-    padding: none;
+    padding: 0;
     background: none;
 }
 
@@ -164,7 +166,7 @@ Desktop
     position: relative;
     height: 70vh;
     width: 100%;
-    padding-inline: .5rem;
+    padding-inline: .5rem 1.2rem;
     overflow-y: scroll;
 }
 
@@ -174,16 +176,61 @@ Desktop
 }
 
 .menu__item {
-    margin-block-end: .5em;
+    margin-block: 1rem;
 }
 
 .menu__item:last-child {
     margin-block-end: 0;
 }
 
+.menu__item--first-lvl {
+    font-size: 1.5rem;
+}
+
+.menu__item--nested {
+    position: relative;
+    padding-inline-end: calc(var(--sub-menu-arrow) * 1.5);
+    display: grid;
+    grid-template-rows: auto 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+
+.menu__item--nested[area-expand="true"] {
+    border-right: var(--line-width) solid var(--text);
+    grid-template-rows: auto 1fr;
+}
+
+.menu__item--nested::after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    inset-block-start: calc(50% - calc(var(--sub-menu-arrow) / 2));
+    inset-inline-end: calc(var(--line-width) + 2px);
+    width: var(--sub-menu-arrow);
+    aspect-ratio: 1 / 1;
+    border: var(--line-width) solid var(--text);
+    transform: rotate(45deg);
+    transition: transform .5s ease;
+}
+
+.menu__item--nested[area-expand='true']::after {
+    transform: rotate(125deg);
+    background-color: var(--accent);
+    transition: all .5s ease;
+}
+
+.menu__sub-menu {
+    overflow: hidden;
+}
+
+.menu__item--second-lvl {
+    font-size: 1.3rem;
+}
+
 .menu__link {
     color: var(--text);
-    font-size: 1.3em;
 }
 
 /* Forms */

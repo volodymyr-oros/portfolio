@@ -28,3 +28,18 @@ function closeBurgerMenu() {
     overlay.remove();
     burgerButton.setAttribute('area-expand', 'false');
 }
+
+const subMenus = document.querySelectorAll('.menu__sub-menu');
+const nestedMenuItems = document.querySelectorAll('.menu__item--nested');
+
+nestedMenuItems.forEach(nestedMenuItem => {
+    nestedMenuItem.querySelector('.menu__link').addEventListener('click', () => {
+        if (nestedMenuItem.getAttribute('area-expand') === 'false') {
+            nestedMenuItem.setAttribute('area-expand', 'true');
+            nestedMenuItem.querySelector('[area-visible]').setAttribute('area-visible', 'true');
+        } else if (nestedMenuItem.getAttribute('area-expand') === 'true') {
+            nestedMenuItem.setAttribute('area-expand', 'false');
+            nestedMenuItem.querySelector('[area-visible]').setAttribute('area-visible', 'false');
+        }
+    });
+});
