@@ -9,20 +9,17 @@
             </div>
             <nav id="primary-navigation" class="navigation flex flex-alg-cnt" area-visible="false">
                 <ul class="menu">
-                    <li class="menu__item">
+                    <li class="menu__item menu__item--first-lvl">
                         <a href="#" class="menu__link">Menu-category-1</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Menu-category-1</a>
-                    </li>
-                    <li class="menu__item account">
-                        <span class="account__menu-name">Custome account menu</span>
-                        <ul class="account__navigation">
-                            <li class="account__item">
-                                <a href="/customer/account/signup.php" class="account__link">Sign up</a>
+                    <li class="menu__item menu__item--first-lvl menu__item--nested" aria-controls="customer-account-menu2" area-expand="false">
+                        <span class="menu__link">Custome account menu</span>
+                        <ul id="customer-account-menu2" class="menu__sub-menu" area-visible="false">
+                            <li class="menu__item menu__item--second-lvl">
+                                <a href="/customer/account/signup.php" class="menu__link">Sign up</a>
                             </li>
-                            <li class="account__item">
-                                <a href="/customer/account/login.php" class="account__link">Log in</a>
+                            <li class="menu__item menu__item--second-lvl">
+                                <a href="/customer/account/login.php" class="menu__link">Log in</a>
                             </li>
                         </ul>
                     </li>
