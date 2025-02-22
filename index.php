@@ -10,7 +10,7 @@
     <div class="wrapper template">
         <?php require_once './includes/layout/page_header.inc.php'; ?>
         <main class="page template__subgrid">
-            <?php require_once './includes/layout/page_message.inc.php' ?>
+            <?php require_once './includes/layout/page_message.inc.php'; ?>
             <div class="page__content template__width-content"></div>
         </main>
         <?php require_once './includes/layout/page_footer.inc.php'; ?>
