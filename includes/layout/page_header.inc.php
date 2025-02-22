@@ -1,10 +1,9 @@
 <header class="header template__subgrid">
     <div class="header__content template__width-content flex flex-jst-btw flex-alg-cnt">
-
             <div class="header__logo logo">
                 <a href="/" class="logo__link">
                     <span class="logo__text sr-only">My portfolio</span>
-                    <img src="/assets//images/header/web-programming.png" alt="logo" class="logo__image" height="60px" width="60px">
+                    <img src="/assets/images/header/web-programming.png" alt="logo" class="logo__image" height="60px" width="60px">
                 </a>
             </div>
             <nav id="primary-navigation" class="navigation flex flex-alg-cnt" area-visible="false">

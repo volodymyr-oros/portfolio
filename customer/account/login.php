@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <?php require("../../includes/header-meta.php"); ?>
-    <script src="../../assets/js/form.js" defer></script>
+    <?php require '../../includes/layout/page_head.inc.php'; ?>
+    <script src="/assets/js/form.js" defer></script>
     <title>Account login</title>
 </head>
 
 <body>
     <div class="wrapper template">
-        <?php require("../../includes/header.php"); ?>
+        <?php require '../../includes/layout/page_header.inc.php'; ?>
         <main class="page">
             <div class="page__box template--content">
                 <div class="page__content">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </main>
-        <?php require("../../includes/footer.php"); ?>
+        <?php require '../../includes/layout/page_footer.inc.php'; ?>
     </div>
 </body>
 
