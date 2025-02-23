@@ -51,14 +51,8 @@ Desktop
     --warning: #FBBF24;
     --error: #DC2626;
 
-    /* form var */
-    --input-padding: calc(var(--font-size) / 2);
-    --border: 0.2rem;
-    --font-size: 1rem;
-    --label-height: calc(var(--font-size) + calc(var(--border) * 2));
-    --border-color: var(--primary-color);
-    --input-background: white;
-    --input-width: calc(var(--font-size) * 20);
+
+
 
     --mobile-navigation-indent: 30%;
 
@@ -265,79 +259,57 @@ Desktop
 /* Forms */
 
 .form {
-    padding-block: calc(var(--font-size) * 2);
-    display: inline-block;
+    max-width: 350px;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    font-family: 'Inter';
 }
 
 .form__row {
-    position: relative;
-    z-index: 0;
-    margin-block-end: var(--font-size);
-}
-
-.form__row--action {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: var(--font-size);
+    margin-block-end: .7em;
 }
 
 .form__label {
-    position: absolute;
-    z-index: 0;
-    inset-block-start: calc(50% - calc(var(--label-height) / 2));
-    transition: all 0.3s ease;
-    inset-inline-start: var(--font-size);
-    padding-inline: calc(var(--font-size) / 2);
-    border: var(--border) solid transparent;
-    cursor: text;
-}
-
-.form__label,
-.form__input {
-    font-size: var(--font-size);
-    background: var(--input-background);
-    border-radius: var(--font-size);
+    display: block;
+    padding-block-end: .3em;
+    text-align: center;
 }
 
 .form__input {
-    width: var(--input-width);
-    padding: var(--input-padding) var(--font-size);
-    border: var(--border) solid var(--border-color);
+    box-sizing: border-box;
+    width: 100%;
+    padding: .2em .5em;
+    border: var(--line-width) solid var(--text);
+    border-radius: .3em;
+    background-color: white;
+    font-size: 1em;
+    font-family: 'Inter';
 }
 
-.form__input::placeholder {
-    color: transparent;
-}
-
-.form__input:focus::placeholder {
-    color: black;
-    transition: color 1s ease;
-}
-
-.form__row:focus-within .form__label,
-.form__row--filled .form__label {
-    inset-block-start: calc(-50% + calc(var(--label-height) / 3.5));
-    border: var(--border) solid var(--border-color);
+.form__input:active,
+.form__input:focus,
+.form__input:focus-visible {
+    border: var(--line-width) solid var(--primary-color);
 }
 
 .button {
-    font-size: var(--font-size);
-    padding: calc(var(--font-size) / 4) var(--font-size);
-    cursor: pointer;
+    font-size: 1.3rem;
+    padding: .3em 1em;
 }
 
-.button__submit {
-    border: var(--border) solid var(--border-color);
-    border-radius: var(--font-size);
-}
-
-.button__reset {
+.button--reset {
+    background: none;
     border: none;
-    background: transparent;
+    text-decoration: underline;
+    font-style: italic;
 }
 
-.button__reset:hover {
-    text-decoration: underline;
+.button--submit {
+    border: var(--line-width) solid var(--text);
+    border-radius: .3em;
+    background-color: var(--primary-color);
+    color: var(--background);
+    font-weight: bold;
 }
 
 /* Footer */
@@ -429,11 +401,11 @@ Desktop
     /* Main */
 
     .message__item {
-        font-size: var(--font-size);
+        font-size: var(--form-font-size);
         border: var(--border) solid var(--border-color);
-        border-radius: var(--font-size);
-        padding: calc(var(--font-size) / 4) var(--font-size);
-        margin-block-end: var(--font-size);
+        border-radius: var(--form-font-size);
+        padding: calc(var(--form-font-size) / 4) var(--form-font-size);
+        margin-block-end: var(--form-font-size);
     }
 
     .message__item:last-child {
