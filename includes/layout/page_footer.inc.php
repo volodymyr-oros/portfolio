@@ -4,17 +4,17 @@
             <ul class="footer__column flex flex-jst-ard">
                 <li class="footer__item">
                     <a href="#" class="footer_link">
-                        <img src="../../assets//images/footer/linkedin.png" alt="linkedin" class="footer__img" header="50px" width="50px">
+                        <img src="/assets/images/footer/linkedin.png" alt="linkedin" class="footer__img" header="50px" width="50px">
                     </a>
                 </li>
                 <li class="footer__item">
                     <a href="#" class="footer_link">
-                        <img src="../../assets//images/footer/codepen.png" alt="codepen" class="footer__img" header="50px" width="50px">
+                        <img src="/assets/images/footer/codepen.png" alt="codepen" class="footer__img" header="50px" width="50px">
                     </a>
                 </li>
                 <li class="footer__item">
                     <a href="#" class="footer_link">
-                        <img src="../../assets//images/footer/github.png" alt="github" class="footer__img" header="50px" width="50px">
+                        <img src="/assets/images/footer/github.png" alt="github" class="footer__img" header="50px" width="50px">
                     </a>
                 </li>
             </ul>
