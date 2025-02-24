@@ -256,6 +256,45 @@ Desktop
     line-height: 1.5em;
 }
 
+.page__title-text {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Inter';
+}
+
+/* Page message */
+
+.message__item:first-child {
+    margin-block-start: .5em;
+}
+
+.message__item {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: .5em;
+    border: var(--line-width) solid var(--text);
+    border-radius: .3em;
+    margin-block-end: .5em;
+}
+
+.message__item--error {
+    background-color: var(--error);
+}
+
+.message__item--succes {
+    background-color: var(--success);
+}
+
+.message__item--warning {
+    background-color: var(--warning);
+}
+
+.message__item--info {
+    background-color: var(--accent);
+}
+
 /* Forms */
 
 .form {
@@ -374,48 +413,6 @@ Desktop
         minmax(250px, 400px) [modal-end] 
         minmax(80px, 200px) [content-end] 
         minmax(15px, 1fr) [edge-end];
-    }
-
-    /* Header */
-
-    .menu-parent {
-        position: relative;
-    }
-
-    .menu-parent:hover>.menu-child {
-        visibility: visible;
-        pointer-events: all;
-    }
-
-    .menu-child {
-        position: absolute;
-        visibility: hidden;
-        pointer-events: none;
-    }
-
-    .first-child {
-        inset-block-start: 100%;
-        inset-inline-start: 0;
-    }
-
-    /* Main */
-
-    .message__item {
-        font-size: var(--form-font-size);
-        border: var(--border) solid var(--border-color);
-        border-radius: var(--form-font-size);
-        padding: calc(var(--form-font-size) / 4) var(--form-font-size);
-        margin-block-end: var(--form-font-size);
-    }
-
-    .message__item:last-child {
-        margin-block-end: 0;
-    }
-
-    .page__title-text {
-        text-align: center;
-        font-size: 2rem;
-        font-family: 'Inter';
     }
 
 }
