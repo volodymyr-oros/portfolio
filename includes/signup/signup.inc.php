@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try {
 
-        require_once("dbh.inc.php");
-        require_once("signup_model.inc.php");
-        require_once("signup_contr.inc.php");
+        require_once '../dbh.inc.php';
+        require_once 'signup_model.inc.php';
+        require_once 'signup_contr.inc.php';
 
         // Error handlers
         $errors = [];
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors["password_compare"] = "The \"Password\" and \"Confirm password\" should be the same.";
         }
 
-        include_once "config_session.inc.php";
+        include_once '../config_session.inc.php';
 
         if ($errors) {
             $_SESSION["errors_signup"] = $errors;
@@ -60,14 +60,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         create_user(
-            $prod,
+            $pdo,
             $user_first_name, 
             $user_last_name, 
             $user_email,
             $user_password
         );
 
-        header('Location: ../index.php?signup=success');
+        header('Location: ../../index.php?signup=success');
 
         $pdo = null;
         $stmt = null;

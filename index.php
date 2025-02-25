@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php require_once './includes/layout/page_head.inc.php'; ?>
+    <?php 
+    require_once './includes/layout/page_head.inc.php'; 
+    require_once './includes/signup/signup_view.inc.php';
+    ?>
     <title>Portfolio</title>
 </head>
 
@@ -14,7 +17,7 @@
             <div class="page__title template__width-content">
                 <h1 class="page__title-text sr-only">Home page</h1>
             </div>
-            <?php require_once './includes/layout/page_message.inc.php'; ?>
+            <?php check_signup_errors(); ?>
             <div class="page__content template__width-content"></div>
         </main>
         
