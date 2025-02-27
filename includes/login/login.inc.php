@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $_SESSION['session_regenerated_at'] = time();
 
-        header('Location: ./index.php?login=success');
+        header('Location: ../../customer/account/profile/home.php?login=success');
         $pdo = null;
         $stmt = null;
 

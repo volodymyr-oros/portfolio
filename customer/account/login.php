@@ -1,3 +1,7 @@
+<?php
+require_once '../../includes/config_session.inc.php';
+require_once '../../includes/login/login_view.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +18,7 @@
             <div class="page__title template__width-content">
                 <h1 class="page__title-text">Account login</h1>
             </div>
-            <?php require_once '../../includes/layout/page_message.inc.php'; ?>
+            <?php display_login_form_messages(); ?>
             <div class="page__login template__width-content">
                 <form action="../../includes/login/login.inc.php" method="POST" class="page__form form" autocomplete="on">
 
