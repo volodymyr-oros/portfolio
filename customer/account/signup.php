@@ -15,13 +15,11 @@ require_once '../../includes/signup/signup_view.inc.php';
     <div class="wrapper template">
         <?php require '../../includes/layout/page_header.inc.php'; ?>
 
-        <?php check_signup_errors(); ?>
-
         <main class="page template__subgrid">
             <div class="page__title template__width-content">
                 <h1 class="page__title-text">Create an account</h1>
             </div>
-            <?php require_once '../../includes/layout/page_message.inc.php'; ?>
+            <?php check_signup_errors(); ?>
             <div class="page__signup template__width-content">
                 <form action="../../includes/signup/signup.inc.php" method="POST" class="form" autocomplete="on">
                     <div class="form__row">
