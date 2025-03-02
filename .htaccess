@@ -1,6 +1,10 @@
 RewriteEngine On
 
-# Перенаправлення всіх запитів до index.php для обробки маршрутів
+# Disable viewing directory contents
+Options -Indexes
+ErrorDocument 403 /view/no-route.php
+
+# Redirect all requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php [QSA,L]
