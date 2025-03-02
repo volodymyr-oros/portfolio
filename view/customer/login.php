@@ -1,6 +1,6 @@
 <?php
-require_once '../../includes/config_session.inc.php';
-require_once '../../includes/login/login_view.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/config_session.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/login/login_view.inc.php';
 
     if (isset($_SESSION['user_id'])) {
         header('Location: ./profile/home.php');
@@ -12,13 +12,13 @@ require_once '../../includes/login/login_view.inc.php';
 <html lang="en">
 
 <head>
-    <?php require '../../includes/layout/page_head.inc.php'; ?>
+    <?php require $_SERVER['DOCUMENT_ROOT'] . '/includes/layout/page_head.inc.php'; ?>
     <title>Account login</title>
 </head>
 
 <body>
     <div class="wrapper template">
-        <?php require '../../includes/layout/page_header.inc.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'] . '/includes/layout/page_header.inc.php'; ?>
 
         <main class="page template__subgrid">
             <div class="page__title template__width-content">
@@ -46,7 +46,7 @@ require_once '../../includes/login/login_view.inc.php';
             </div>
         </main>
 
-        <?php require '../../includes/layout/page_footer.inc.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'] . '/includes/layout/page_footer.inc.php'; ?>
     </div>
 </body>
 

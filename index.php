@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <?php 
-    require_once './includes/layout/page_head.inc.php'; 
-    require_once './includes/signup/signup_view.inc.php';
-    ?>
-    <title>Portfolio</title>
-</head>
+$routes = require_once 'routes.php';
 
-<body>
-    <div class="wrapper template">
-        <?php require_once './includes/layout/page_header.inc.php'; ?>
+$request_uri = $_SERVER['REQUEST_URI'];
 
-        <main class="page template__subgrid">
-            <div class="page__title template__width-content">
-                <h1 class="page__title-text sr-only">Home page</h1>
-            </div>
-            <?php check_signup_errors(); ?>
-            <div class="page__content template__width-content"></div>
-        </main>
-        
-        <?php require_once './includes/layout/page_footer.inc.php'; ?>
-    </div>
-</body>
+// Clean the GET parameters from URI if exist
+$request_uri = strtok($request_uri, '?');
 
-</html>
+if (array_key_exists($request_uri, $routes)) {
+    include $routes[$request_uri];
+} else {
+    include './view/no-route.php';
+}
