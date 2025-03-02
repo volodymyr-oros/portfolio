@@ -1,5 +1,7 @@
 <?php
 
+require_once 'config_paths.php';
+
 $routes = require_once 'routes.php';
 
 $request_uri = $_SERVER['REQUEST_URI'];
