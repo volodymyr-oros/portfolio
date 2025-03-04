@@ -3,7 +3,7 @@ require_once INCLUDES_PATH . '/config_session.inc.php';
 require_once INCLUDES_PATH . '/login/login_view.inc.php';
 
     if (isset($_SESSION['user_id'])) {
-        header('Location: ./profile/home.php');
+        header('Location: /customer/my-account');
         exit();
     }
 

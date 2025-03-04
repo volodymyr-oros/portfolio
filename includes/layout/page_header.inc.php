@@ -15,10 +15,10 @@
                         <span class="menu__link">Custome account menu</span>
                         <ul id="customer-account-menu2" class="menu__sub-menu" area-visible="false">
                             <li class="menu__item menu__item--second-lvl">
-                                <a href="/signup" class="menu__link">Sign up</a>
+                                <a href="/customer/signup" class="menu__link">Sign up</a>
                             </li>
                             <li class="menu__item menu__item--second-lvl">
-                                <a href="/login" class="menu__link">Log in</a>
+                                <a href="/customer/login" class="menu__link">Log in</a>
                             </li>
                         </ul>
                     </li>

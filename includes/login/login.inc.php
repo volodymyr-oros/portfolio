@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($errors) {
             $_SESSION['errors_login'] = $errors;
 
-            header('Location: /login');
+            header('Location: /customer/login');
             die();
         }
 
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $_SESSION['session_regenerated_at'] = time();
 
-        header('Location: /my-account?login=success');
+        header('Location: /customer/my-account?login=success');
         $pdo = null;
         $stmt = null;
 
@@ -64,6 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 } else {
 
-    header('Location: /login');
+    header('Location: /customer/login');
     die();
 }

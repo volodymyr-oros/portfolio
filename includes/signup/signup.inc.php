@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($errors) {
             $_SESSION["errors_signup"] = $errors;
-            header('Location: /signup');
+            header('Location: /customer/signup');
             die();
         }
 
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user_password
         );
 
-        header('Location: /?signup=success');
+        header('Location: /customer/?signup=success');
 
         $pdo = null;
         $stmt = null;
@@ -80,6 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 } else {
 
-    header('Location: /signup');
+    header('Location: /customer/signup');
     die();
 }
