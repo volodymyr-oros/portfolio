@@ -2,7 +2,7 @@ RewriteEngine On
 
 # Disable viewing directory contents
 Options -Indexes
-ErrorDocument 403 /view/no-route.php
+ErrorDocument 403 ../view/no-route.php
 
 # Redirect all requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
