@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try {
 
-        require_once '../dbh.inc.php';
+        require_once INCLUDES_PATH . '/dbh.inc.php';
         require_once 'signup_model.inc.php';
         require_once 'signup_contr.inc.php';
 
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors["password_compare"] = "The \"Password\" and \"Confirm password\" should be the same.";
         }
 
-        include_once '../config_session.inc.php';
+        include_once INCLUDES_PATH . '/config_session.inc.php';
 
         if ($errors) {
             $_SESSION["errors_signup"] = $errors;
