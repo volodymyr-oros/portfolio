@@ -26,7 +26,7 @@ require_once INCLUDES_PATH . '/login/login_view.inc.php';
             </div>
             <?php display_login_form_messages(); ?>
             <div class="page__login template__width-content">
-                <form action="../../includes/login/login.inc.php" method="POST" class="page__form form" autocomplete="on">
+                <form action="/customer/login/action" method="POST" class="page__form form" autocomplete="on">
 
                     <div class="form__row">
                         <label for="email" class="form__label">Email</label>

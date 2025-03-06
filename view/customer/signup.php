@@ -27,7 +27,7 @@ require_once INCLUDES_PATH . '/signup/signup_view.inc.php';
             </div>
             <?php check_signup_errors(); ?>
             <div class="page__signup template__width-content">
-                <form action="../../includes/signup/signup.inc.php" method="POST" class="form" autocomplete="on">
+                <form action="/customer/signup/action" method="POST" class="form" autocomplete="on">
                     <div class="form__row">
                         <label for="first-name" class="form__label">First name</label>
                         <input id="first-name" type="text" name="first-name" class="form__input" placeholder="Enter your first name..." required autocomplete="given-name">
