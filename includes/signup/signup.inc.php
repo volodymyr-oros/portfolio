@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user_password
         );
 
-        header('Location: /customer/?signup=success');
+        header('Location: /customer/signup?signup=success');
 
         $pdo = null;
         $stmt = null;
