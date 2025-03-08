@@ -155,8 +155,8 @@
     inset: 0 0 0 var(--mobile-navigation-indent);
     border-left: var(--line-width) solid var(--text);
     overflow-y: scroll;
-    background: hsla(0, 0%, 100%, 0.1);
-    backdrop-filter: blur(.1rem);
+    background: hsla(194, 96%, 28%, 0.507);
+    backdrop-filter: blur(.6rem);
     transform: translateX(100%);
     transition: transform .3s ease-in-out;
 }
@@ -232,7 +232,9 @@
 }
 
 .menu__link {
-    color: var(--text);
+    font-family: 'Inter';
+    color: white;
+    text-shadow: 0 0 8px black;
     line-height: 1.5em;
 }
 
