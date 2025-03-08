@@ -341,6 +341,51 @@
     color: var(--accent);
 }
 
+section {
+    margin-block-end: 2.5rem;
+}
+
+/* technologies banner */
+
+.technologies {
+
+}
+
+[class*='__title'] {
+    color: red;
+}
+
+[class*='__description'] {
+    color: red;
+}
+
+.technologies__grid {
+
+}
+
+.technologies__cell {
+
+}
+
+[class*='__html'] {
+
+}
+
+[class*='__css'] {
+
+}
+
+[class*='__js'] {
+
+}
+
+[class*='__php'] {
+
+}
+
+.technologies__label {
+
+}
 /* Forms */
 
 .form {
