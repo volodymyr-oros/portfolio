@@ -1,14 +1,12 @@
 <?php
-
 require_once INCLUDES_PATH . '/config_session.inc.php';
+include_once INCLUDES_PATH . '/my_account/my_account_view.inc.php';
 
-    if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id'])) {
 
-        header('Location: ../login.php');
-        exit();
-
-    }
-
+    header('Location: ../login.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +14,7 @@ require_once INCLUDES_PATH . '/config_session.inc.php';
 
 <head>
     <?php require INCLUDES_PATH . '/layout/page_head.inc.php'; ?>
-    <title>Account profile</title>
+    <title>My account</title>
 </head>
 
 <body>
@@ -25,11 +23,11 @@ require_once INCLUDES_PATH . '/config_session.inc.php';
 
         <main class="page template__subgrid">
             <div class="page__title template__width-content">
-                <h1 class="page__title-text">Account profile</h1>
+                <h1 class="page__title-text">My account profile</h1>
             </div>
-            <?php require_once INCLUDES_PATH . '/layout/page_message.inc.php'; ?>
-            <div class="page__ template__width-content">
-                
+            <?php display_account_error_messages(); ?>
+            <div class="page__greeting template__width-content">
+                <?php display_greeting(); ?>
             </div>
         </main>
 
