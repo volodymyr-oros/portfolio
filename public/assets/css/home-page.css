@@ -1,0 +1,91 @@
+/* Hero banner */
+
+.hero__column:first-child {
+    margin-block-end: 1rem;
+}
+
+.hero__picture {
+    display: block;
+    padding: 1rem;
+}
+
+.hero__picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: .5em .5em .5em var(--accent-warm);
+}
+
+.hero__text,
+.hero__link {
+    text-align: center;
+}
+
+.hero__link {
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.link {
+    display: block;
+    width: fit-content;
+    padding: .2em;
+    margin: 0 auto;
+    color: var(--primary-color);
+}
+
+.link::before {
+    content: '< ';
+}
+.link::after {
+    content: ' />';
+}
+
+.link:active {
+    color: var(--accent);
+}
+
+section {
+    margin-block-end: 2.5rem;
+}
+section:first-child {
+    margin: 0;
+}
+
+
+.technologies__banner {
+    margin-block-end: 2rem;
+}
+
+.technologies__cell {
+    display: block;
+    padding: 1rem;
+    margin-block-end: 1rem;
+    font-family: 'Inter';
+}
+
+.technologies__cell:last-child {
+    margin-block-end: 0;
+}
+
+.technologies__item {
+    color: var(--text);
+}
+
+.technologies__label {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.technologies__text {
+    font-size: 1.3rem;
+}
+
+.technologies__img {
+    display: block;
+    width: fit-content;
+    margin: .7rem auto 0 auto;
+}
