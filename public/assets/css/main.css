@@ -1,6 +1,7 @@
+/* Link header and footer CSS */
 @import 'header.css';
 @import 'footer.css';
-
+/* Add fonts */
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/inter/Inter-Regular.woff2') format('woff2'),
@@ -10,7 +11,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'MeowScript';
     src: url('../fonts/meow-script/MeowScript-Regular.woff2') format('woff2'),
@@ -20,30 +20,22 @@
     font-weight: normal;
     font-style: normal;
 }
-
-/* CSS root */
-
+/* CSS root variables */
 :root {
-    /* color scheme */
+    /* Website color scheme */
     --primary-color: #1E3A8A;
     --accent: #2563EB;
     --accent-warm: #FB923C;
     --background: #EFF6FF;
     --text: #374151;
+    /* Status color */
     --success: #22C55E;
     --warning: #FBBF24;
     --error: #DC2626;
-
-
-
-
-    --mobile-navigation-indent: 30%;
-
+    /* Website decoration elements */
     --line-width: 3px;
-
-    --sub-menu-arrow: 1rem;
 }
-
+/* Page wrapp */
 .wrapper {
     position: relative;
     height: 100vh;
@@ -51,19 +43,13 @@
     background-color: var(--background);
     color: var(--text);
 }
-
-[class*='__overlay'] {
-    position: fixed;
-    /* backdrop-filter: blur(2px); */
-    /* background: rgba(0, 0, 0, 0.2); */
-}
-
 /* Page template */
-
 .template {
     display: grid;
     grid-template: 
+    /* Set up basic layout header main and footer (rows) */
     auto 1fr auto / 
+    /* Set sizes for each breakpoint (column) */
     [edge-start] minmax(15px, 1fr) 
     [content-start] minmax(40px, 100px) 
     [modal-start] minmax(100px, 200px) [center] 
@@ -71,30 +57,25 @@
     minmax(40px, 100px) [content-end] 
     minmax(15px, 1fr) [edge-end];
 }
-
-.template>* {
-    grid-column: span 6;
-}
-
 .template__subgrid {
+    /* Extend each .template first child element into full width */
+    grid-column: span 6;
+    /* Create subgrid which inherit columns template */
     display: grid;
     grid-template-columns: subgrid;
+    /* Fix vertical alignment inside main tag */
     grid-auto-rows: min-content;
 }
-
+/* Define container sizes */
 .template__width-full {
     grid-column: edge-start / edge-end;
 }
-
 .template__width-content {
     grid-column: content-start / content-end;
 }
-
 .template__width-modal {
     grid-column: modal-start / modal-end;
 }
-
-
 /* Page informative message */
 .message__item {
     font-family: 'Inter';
@@ -122,65 +103,12 @@
 .message__item--info {
     background-color: var(--accent);
 }
-
-/* Hero banner */
-
-.hero__column:first-child {
-    margin-block-end: 1rem;
+/* Common used classes */
+[class*='__overlay'] {
+    position: fixed;
+    /* backdrop-filter: blur(2px); */
+    /* background: rgba(0, 0, 0, 0.2); */
 }
-
-.hero__picture {
-    display: block;
-    padding: 1rem;
-}
-
-.hero__picture img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    box-shadow: .5em .5em .5em var(--accent-warm);
-}
-
-.hero__text,
-.hero__link {
-    text-align: center;
-}
-
-.hero__link {
-    font-family: 'Inter';
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.link {
-    display: block;
-    width: fit-content;
-    padding: .2em;
-    margin: 0 auto;
-    color: var(--primary-color);
-}
-
-.link::before {
-    content: '< ';
-}
-.link::after {
-    content: ' />';
-}
-
-.link:active {
-    color: var(--accent);
-}
-
-section {
-    margin-block-end: 2.5rem;
-}
-section:first-child {
-    margin: 0;
-}
-
-/* technologies banner */
-
 [class*='__title'] {
     font-family: 'MeowScript';
     font-size: 3rem;
@@ -188,171 +116,25 @@ section:first-child {
     color: var(--text);
     text-align: center;
 }
-
 [class*='__description'] {
     font-family: 'Inter';
     font-size: 1.3rem;
     line-height: 1.8rem;
 }
-
-.technologies__banner {
-    margin-block-end: 2rem;
-}
-
-.technologies__cell {
-    display: block;
-    padding: 1rem;
-    margin-block-end: 1rem;
-    font-family: 'Inter';
-}
-
-.technologies__cell:last-child {
-    margin-block-end: 0;
-}
-
-.technologies__item {
-    color: var(--text);
-}
-
-.technologies__label {
-    font-size: 4rem;
-    line-height: 5rem;
-    text-transform: uppercase;
-}
-
-.technologies__text {
-    font-size: 1.3rem;
-}
-
-.technologies__img {
-    display: block;
-    width: fit-content;
-    margin: .7rem auto 0 auto;
-}
-
 .frame {
     border: var(--line-width) solid var(--text);
     border-radius: .5rem;
 }
+/* Layout breakpoints */
+@media(max-width: 450px) { /* Mobile view */
 
-/* Forms */
-
-.form {
-    max-width: 350px;
-    margin: 2rem auto;
-    font-size: 1.5rem;
-    font-family: 'Inter';
 }
+@media(max-width: 800px) { /* Tablet view */
 
-.form__row {
-    margin-block-end: .7em;
 }
+@media (max-width: 1023px) { /* Large tablet view */
 
-.form__label {
-    display: block;
-    padding-block-end: .3em;
-    text-align: center;
 }
-
-.form__input {
-    box-sizing: border-box;
-    width: 100%;
-    padding: .2em .5em;
-    border: var(--line-width) solid var(--text);
-    border-radius: .3em;
-    background-color: white;
-    font-size: 1em;
-    font-family: 'Inter';
-}
-
-.form__input:active,
-.form__input:focus,
-.form__input:focus-visible {
-    border: var(--line-width) solid var(--primary-color);
-}
-
-.button {
-    font-size: 1.3rem;
-    padding: .3em 1em;
-}
-
-.button--reset {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    font-style: italic;
-}
-
-.button--submit {
-    border: var(--line-width) solid var(--text);
-    border-radius: .3em;
-    background-color: var(--primary-color);
-    color: var(--background);
-    font-weight: bold;
-}
-
-/* Footer */
-
-.footer {
-    background: var(--background);
-}
-
-.footer__content {
-    padding-block: 1.2rem .5rem;
-}
-
-.footer__row {
-    margin-block-end: .5rem;
-}
-
-.footer__row:last-child {
-    margin-block-end: 0;
-}
-
-.footer__column {
-    margin: 0 auto;
-}
-
-.footer__item {
-    /* width: fit-content; */
-    text-align: center;
-}
-
-.footer__text,
-.footer_link {
-    font-size: 1.1em;
-}
-
-.footer_link {
-    color: var(--accent);
-}
-
-.copyright__text {
-    text-align: center;
-}
-
-/* Tablet */
-
-@media (min-width: 768px) {}
-
-
-/* Desktop */
-
-
-@media(min-width: 1024px) {
-
-    /* Page template */
-
-    .template {
-        display: grid;
-        grid-template: 
-        auto 1fr auto / 
-        [edge-start] minmax(15px, 1fr) 
-        [content-start] minmax(80px, 200px) 
-        [modal-start] minmax(250px, 400px) [center] 
-        minmax(250px, 400px) [modal-end] 
-        minmax(80px, 200px) [content-end] 
-        minmax(15px, 1fr) [edge-end];
-    }
+@media(min-width: 1024px) { /* Desktop view */
 
 }
