@@ -35,6 +35,10 @@
     /* Website decoration elements */
     --line-width: 3px;
 }
+/* Define base font family */
+body {
+    font-family: 'Inter';
+}
 /* Page wrapp */
 .wrapper {
     position: relative;
@@ -116,17 +120,20 @@
     /* backdrop-filter: blur(2px); */
     /* background: rgba(0, 0, 0, 0.2); */
 }
+/* Base title style */
 [class*='__title'] {
-    font-family: 'MeowScript';
-    font-size: 3rem;
-    line-height: 4rem;
-    color: var(--text);
-    text-align: center;
+    /* Overwrite default block element property and center it */
+    width: fit-content;
+    margin: 0 auto;
+    /* Text decoration */
+    font-size: 3em;
+    line-height: 1.5em;
+    color: var(--primary-color);
 }
+/* Base paragraph style */
 [class*='__description'] {
-    font-family: 'Inter';
-    font-size: 1.3rem;
-    line-height: 1.8rem;
+    font-size: 1.3em;
+    line-height: 1.4em;
 }
 .frame {
     border: var(--line-width) solid var(--text);
