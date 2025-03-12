@@ -1,9 +1,11 @@
 <?php
 
-$host_name = "localhost";
-$db_name = "portfolio_db";
-$db_user_name = "portfolio_dba";
-$db_user_password = "password1";
+$config = parse_ini_file(__DIR__ . './env');
+
+$host_name = $config['DB_HOST'];
+$db_name = $config['DB_NAME'];
+$db_user_name = $config['DB_USER_NAME'];
+$db_user_password = $config['DB_USER_PASSWORD'];
 
 try {
     $pdo = new PDO(
