@@ -32,6 +32,15 @@
     --success: #22C55E;
     --warning: #FBBF24;
     --error: #DC2626;
+    /* Languages color */
+    --html-primary: #E44D26;
+    --html-hover: #D43C1A;
+    --css-primary: #2965F1;
+    --css-hover: #1F4BBF;
+    --js-primary: #F7DF1E;
+    --js-hover: #D1C500;
+    --php-primary: #8993BE;
+    --php-hover: #6F7A9B;
     /* Website decoration elements */
     --line-width: 3px;
 }
