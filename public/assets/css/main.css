@@ -120,13 +120,17 @@ body {
     /* backdrop-filter: blur(2px); */
     /* background: rgba(0, 0, 0, 0.2); */
 }
+/* Base indent for each new section */
+[class*='__heading'] {
+    margin-block: 1em;
+}
 /* Base title style */
 [class*='__title'] {
     /* Overwrite default block element property and center it */
     width: fit-content;
     margin: 0 auto;
     /* Text decoration */
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1.5em;
     color: var(--primary-color);
 }
@@ -135,6 +139,9 @@ body {
     font-size: 1.3em;
     line-height: 1.4em;
 }
+
+/* Decorate basic Button and Link */
+
 .frame {
     border: var(--line-width) solid var(--text);
     border-radius: .5rem;
