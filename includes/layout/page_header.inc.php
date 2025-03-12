@@ -3,7 +3,7 @@
             <div class="header__logo logo">
                 <a href="/" class="logo__link">
                     <span class="logo__text sr-only">My portfolio</span>
-                    <img src="/assets/images/header/web-programming.png" alt="logo" class="logo__image" width="100px">
+                    <img src="/assets/images/header/web-programming.png" alt="logo" class="logo__image" width="70px">
                 </a>
             </div>
             <nav id="primary-navigation" class="navigation" area-visible="false">
