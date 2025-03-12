@@ -1,6 +1,6 @@
 <?php
 
-$config = parse_ini_file(__DIR__ . './env');
+$config = parse_ini_file(ROOT_PATH . '/.env');
 
 $host_name = $config['DB_HOST'];
 $db_name = $config['DB_NAME'];
