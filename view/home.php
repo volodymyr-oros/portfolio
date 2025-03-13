@@ -6,6 +6,7 @@
     require_once INCLUDES_PATH . '/layout/page_head.inc.php';
     require_once INCLUDES_PATH . '/signup/signup_view.inc.php';
     ?>
+    <link rel="stylesheet" href="/assets/css/home-page.css">
     <title>Portfolio</title>
 </head>
 
