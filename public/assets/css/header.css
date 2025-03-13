@@ -71,6 +71,12 @@
     inset-block-end: calc(50% - calc(var(--line-width) / 2));
     transform: rotate(-45deg);
 }
+/* Make lines visible on blue background */
+.header__burger-menu[area-expand="true"] .header__burger-line,
+.header__burger-menu[area-expand="true"]::before,
+.header__burger-menu[area-expand="true"]::after {
+    background-color: white;
+}
 /* Mobile view */
 @media(max-width: 450px) {
 
