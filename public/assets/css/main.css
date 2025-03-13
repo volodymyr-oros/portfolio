@@ -148,6 +148,15 @@ body {
     font-size: 1.3em;
     line-height: 1.4em;
 }
+/* List elements style */
+[class*='__list'] {
+    display: block;
+    padding-block: .3em;
+    padding-inline-start: .3em;
+}
+[class*='__list--unordered'] li::before {
+    content: '->';
+}
 
 /* Decorate basic Button and Link */
 
