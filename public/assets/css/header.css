@@ -32,9 +32,6 @@
     position:relative;
     height: 2.2rem;
     aspect-ratio: 1 / 1;
-    border: none;
-    padding: 0;
-    background: none;
 }
 /* Create burger button lines */
 .header__burger-line,
