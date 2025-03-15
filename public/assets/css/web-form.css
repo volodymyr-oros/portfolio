@@ -1,53 +1,34 @@
+/* Define default Form text size */
 .form {
-    max-width: 350px;
-    margin: 2rem auto;
-    font-size: 1.5rem;
-    font-family: 'Inter';
+    font-size: 1rem;
 }
-
 .form__row {
-    margin-block-end: .7em;
-}
-
-.form__label {
-    display: block;
-    padding-block-end: .3em;
+    /* Gap betwen form rows */
+    margin-block-end: 1em;
+    /* Centered buttons and labels */
     text-align: center;
 }
-
+.form__label {
+    font-size: 2em;
+    line-height: 1.5em;
+    color: var(--accent);
+}
+/* Creates input shape */
+.input-shape {
+    padding: .3em .5em;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
 .form__input {
-    box-sizing: border-box;
+    font-size: 1.2em;
+    color: var(--primary-color);
     width: 100%;
-    padding: .2em .5em;
-    border: var(--line-width) solid var(--text);
-    border-radius: .3em;
+    padding: .3em .5em;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
     background-color: white;
-    font-size: 1em;
-    font-family: 'Inter';
 }
-
 .form__input:active,
-.form__input:focus,
-.form__input:focus-visible {
-    border: var(--line-width) solid var(--primary-color);
-}
-
-.button {
-    font-size: 1.3rem;
-    padding: .3em 1em;
-}
-
-.button--reset {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    font-style: italic;
-}
-
-.button--submit {
-    border: var(--line-width) solid var(--text);
-    border-radius: .3em;
-    background-color: var(--primary-color);
-    color: var(--background);
-    font-weight: bold;
+.form__input:focus {
+    box-shadow: 0 0 10px var(--accent);
 }
