@@ -157,12 +157,24 @@ body {
 [class*='__list--unordered'] li::before {
     content: '->';
 }
-
-/* Decorate basic Button and Link */
-
-.frame {
+/* Element decoration */
+[class*='--border'] {
     border: var(--line-width) solid var(--text);
-    border-radius: .5rem;
+}
+/* Genera Button CSS */
+.button {
+    font-size: 2em;
+    font-family: 'Inter';
+    padding: .3em 1em;
+}
+.button--submit {
+    color: white;
+    border: var(--line-width) solid var(--text);
+    background-color: var(--primary-color);
+}
+.button--reset {
+    color: var(--text);
+    text-decoration: underline;
 }
 /* Layout breakpoints */
 @media(min-width: 450px) { /* Mobile view */
