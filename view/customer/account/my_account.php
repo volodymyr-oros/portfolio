@@ -22,13 +22,13 @@ if (!isset($_SESSION['user_id'])) {
         <?php require INCLUDES_PATH . '/layout/page_header.inc.php'; ?>
 
         <main class="page template__subgrid">
-            <div class="page__title template__width-content">
-                <h1 class="page__title-text">My account profile</h1>
-            </div>
+            <section class="page__heading template__width-content">
+                <h1 class="page__title">My account profile</h1>
+            </section>
             <?php display_account_error_messages(); ?>
-            <div class="page__greeting template__width-content">
+            <section class="page__greeting template__width-content">
                 <?php display_greeting(); ?>
-            </div>
+            </section>
         </main>
 
         <?php require INCLUDES_PATH . '/layout/page_footer.inc.php'; ?>
