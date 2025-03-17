@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function display_login_form_messages()
+function display_login_form_eror_messages()
 {
     if (isset($_SESSION['errors_login'])) {
 

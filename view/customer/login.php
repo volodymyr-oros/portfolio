@@ -25,7 +25,7 @@ require_once INCLUDES_PATH . '/login/login_view.inc.php';
             <section class="page__heading template__width-content">
                 <h1 class="page__title">Account login</h1>
             </section>
-            <?php display_login_form_messages(); ?>
+            <?php display_login_form_eror_messages(); ?>
             <section class="page__login template__width-content">
                 <form action="/customer/login/action" method="POST" class="page__form form" autocomplete="on">
 

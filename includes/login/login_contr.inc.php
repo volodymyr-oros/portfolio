@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+// Form general validation
+
+// Check if user submit data
 function is_inputs_empty(string $user_email, string $user_password)
 {
     if (empty($user_email) || empty($user_password)) {
@@ -11,7 +14,20 @@ function is_inputs_empty(string $user_email, string $user_password)
     }
 }
 
-function is_email_invalid(string $user_email)
+// Login input validation
+
+// Check email allowed length
+function is_email_length_invalid(string $user_email)
+{ // 100 - is varchar(100) for an email column in the db
+    if (strlen($user_email) > 100) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Check the email address format
+function is_email_format_invalid(string $user_email)
 {
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
         return true;
@@ -20,7 +36,8 @@ function is_email_invalid(string $user_email)
     }
 }
 
-function is_email_wrong(bool | array $user_data)
+// Check if user exists
+function is_email_not_registered(bool | array $user_data)
 {
     if (!$user_data) {
         return true;
@@ -29,7 +46,20 @@ function is_email_wrong(bool | array $user_data)
     }
 }
 
-function is_password_wrong(string $user_password, string $user_password_hashed)
+// Password input validation
+
+// Check password allowed length
+function is_password_length_invalid(string $user_password)
+{
+    if (strlen($user_password) > 20) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Sumited password and real password match
+function is_password_incorrect(string $user_password, string $user_password_hashed)
 {
     if (!password_verify($user_password, $user_password_hashed)) {
         return true;

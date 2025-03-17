@@ -15,20 +15,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors = [];
 
         if (is_inputs_empty($user_email, $user_password)) {
-            $errors["required_input"] = "All required fields should be filled with valid data.";
+            $errors["empty_input"] = 'Fill in the form fields.';
         }
-        if (is_email_invalid($user_email)) {
-            $errors["invalid_email"] = "The \"Email\" address is not valid.";
+        if (is_email_length_invalid($user_email)) {
+            $errors['email_length'] = 'The email address must be no longer than 100 characters.';
+        }
+        if (is_email_format_invalid($user_email)) {
+            $errors["email_format"] = 'Invalid email format.';
         }
 
         $user_data = get_user_data($pdo, $user_email);
 
-        if (is_email_wrong($user_data)) {
-            $errors["used_email"] = "The \"Email\" is already used.";
+        if (is_email_not_registered($user_data)) {
+            $errors["unregistered_email"] = 'Oops! We could not find an account with that email. Double-check your entry or create a new account.';
+        }
+        if (is_password_length_invalid($user_password)) {
+            $errors['password_length'] = 'The password must be no longer than 20 characters.';
         }
         if (
-            !is_email_wrong($user_data) &&
-            is_password_wrong($user_password, $user_data['password_hash'])
+            !is_email_not_registered($user_data) &&
+            is_password_incorrect($user_password, $user_data['password_hash'])
             ) {
             $errors["login_incorrect"] = "Incorrect login info.";
         }
