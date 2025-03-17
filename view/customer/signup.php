@@ -14,6 +14,7 @@ require_once INCLUDES_PATH . '/signup/signup_view.inc.php';
 
 <head>
     <?php require INCLUDES_PATH . '/layout/page_head.inc.php'; ?>
+    <link rel="stylesheet" href="/assets/css/web-form.css">
     <title>Create an account</title>
 </head>
 
